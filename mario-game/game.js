@@ -11,10 +11,15 @@ const pulo = () => {
 
 const loop = setInterval(() => {
     const canoPosition = cano.offsetLeft;
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    if (canoPosition <= 120) {
+    if (canoPosition <= 120 && canoPosition > 0  && marioPosition < 80) {
+
         cano.style.animation = 'none';
         cano.style.left = '${canoPosition}px';
+
+        mario.style.animation = 'none';
+        mario.style.bottom = '${marioPosition}px'; 
     }
 }, 10);
 
