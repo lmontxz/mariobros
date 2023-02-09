@@ -16,10 +16,13 @@ const loop = setInterval(() => {
     if (canoPosition <= 120 && canoPosition > 0  && marioPosition < 80) {
 
         cano.style.animation = 'none';
-        cano.style.left = '${canoPosition}px';
+        cano.style.left = `${canoPosition}px`;
 
         mario.style.animation = 'none';
-        mario.style.bottom = '${marioPosition}px'; 
+        mario.style.bottom = `${marioPosition}px`; 
+
+        mario.src = './imagens/mariomorto.png'
+        mario.style.style.marginLeft = '50px'
     }
 }, 10);
 
