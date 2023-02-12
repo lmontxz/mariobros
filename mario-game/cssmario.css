@@ -7,10 +7,12 @@
 .borda {
     width: 100%;
     height: 500px;
-    border-bottom: 1px solid #333;
+    border-bottom: 15px solid rgb(35, 139, 3);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    /* background: linear-gradient(rgb(64, 111, 173), rgb(177, 195, 235)); */
+    background: linear-gradient(rgb(228, 85, 28), rgb(230, 196, 158)) 
 }
 
 .cano {
@@ -18,6 +20,21 @@
     bottom: 0;
     width: 80px;
     animation: cano-animation 1.5s infinite linear;
+}
+
+/* .voador {
+    position: absolute;
+    bottom: 300px;
+    width: 180px;
+    animation: voador-animation 5s infinite linear;
+} */
+
+.score {
+    position: absolute;
+    top: 30px;
+    left: auto;
+    font-size: large;
+    font-family: Papyrus;
 }
 
 .mario {
@@ -30,11 +47,10 @@
     animation: pulo 500ms ease-out;
 }
 
-.ceu {
+.nuvem {
     position: absolute;
-    width: 100%;
-    height: 500px;
-    animation: ceu-animation 20s infinite linear;
+    width: 550px;
+    animation: nuvem-animation 20s infinite linear;
 }
 
 @keyframes cano-animation {
@@ -70,12 +86,21 @@
 
 }
 
-@keyframes ceu-animation {
+@keyframes nuvem-animation {
     from {
-        right: -550px;;
+        right: -500px;
     }
 
     to {
         right: 100%;
     }
 }
+
+/* @keyframes voador-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%
+    }
+} */
