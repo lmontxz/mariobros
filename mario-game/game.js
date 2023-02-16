@@ -15,7 +15,7 @@ const loop = setInterval(() => {
     const canoPosition = cano.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    if (canoPosition <= 120 && canoPosition > 0  && marioPosition < 80) {
+    if (canoPosition <= 120 && canoPosition > 0  && marioPosition < 200) {
 
         cano.style.animation = 'none';
         cano.style.left = `${canoPosition}px`;
